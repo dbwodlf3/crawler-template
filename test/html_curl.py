@@ -3,9 +3,7 @@ import os
 import sys
 sys.path.append(os.path.join(settings["projectRoot"], "src"))
 
-from twitter.lib import getTwitById
-from twitter.settings import settings
+from curl.lib import getCurl
 
-res = getTwitById(settings["bearerToken"], 22)
-
+res = getCurl("http://www.naver.com")
 print(res.text)
